@@ -15,7 +15,7 @@ def executeWeb(url):
 def memOcupate():
     cpuUsed = psutil.cpu_percent(5)
     ramUsed = psutil.virtual_memory()[2]
-    if cpuUsed > 80 and ramUsed > 80:
+    if cpuUsed > 80 or ramUsed > 80:
         return True
     else:
         return False
